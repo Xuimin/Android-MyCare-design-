@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardUseCompatPadding="true"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/space_10"
+        app:cardMaxElevation="@dimen/space_5"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/space_10"
+            tools:context=".menu.DetailsActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/personal_details"
+                android:textSize="@dimen/font_title"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notice"
+                android:textAlignment="center"
+                android:layout_margin="@dimen/space_10" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_5" />
+
+            <EditText
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:drawableEnd="@drawable/ic_lock"
+                android:editable="false" />
+
+            <TextView
+                android:id="@+id/tv_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10" />
+
+            <EditText
+                android:id="@+id/tv_user_ic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_ic"
+                android:drawableEnd="@drawable/ic_lock"
+                android:editable="false" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10" />
+
+            <EditText
+                android:id="@+id/tv_user_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_state_location"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10" />
+
+            <EditText
+                android:id="@+id/tv_user_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_address"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10" />
+
+            <EditText
+                android:id="@+id/tv_user_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_contact"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10" />
+
+            <EditText
+                android:id="@+id/tv_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_email" />
+
+            <TextView
+                android:id="@+id/tv_new_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_pass"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10" />
+
+            <EditText
+                android:id="@+id/tv_user_new_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Your new password" />
+
+            <TextView
+                android:id="@+id/tv_new_confirm_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_new_pass"
+                android:textSize="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10" />
+
+            <EditText
+                android:id="@+id/tv_user_new_confirm_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Confirm your new password" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:onClick="saveDetails"
+                android:layout_marginBottom="@dimen/space_n5" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/close"
+                android:textColor="@color/primary"
+                android:backgroundTint="@color/white"
+                android:onClick="closeActivity"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="@dimen/line_height" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
